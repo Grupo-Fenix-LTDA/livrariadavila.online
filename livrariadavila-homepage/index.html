@@ -1,0 +1,290 @@
+<!-- 4deced467d3c25b1 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Carregando...</title>
+    
+    <style>
+        :root {
+            --primary-color: #1F1F3A;
+            --secondary-color: #C89B3C;
+            --accent-color: #8B5A3C;
+            --text-dark: #1A1A2E;
+            --text-light: #5F6070;
+            --bg-light: #FAF6EC;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --success-color: #4C7332;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: var(--white); line-height: 1.6; scroll-behavior: smooth; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .tri6_nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .tri6_logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; letter-spacing: 1.5px; }
+        .tri6_logo span { color: var(--secondary-color); font-style: italic; font-weight: 500; }
+        .tri6_nav-menu { display: flex; list-style: none; gap: 20px; }
+        .tri6_nav-menu a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: color 0.3s; letter-spacing: 0.3px; }
+        .tri6_nav-menu a:hover { color: var(--secondary-color); }
+        .tri6_hero { background: linear-gradient(135deg, #FAF6EC 0%, #EDE3CB 100%); padding: 90px 20px; text-align: center; }
+        .tri6_hero-content { max-width: 800px; margin: 0 auto; }
+        .tri6_hero h1 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 20px; font-weight: 300; letter-spacing: 0.5px; }
+        .tri6_hero h1 em { font-style: italic; color: var(--secondary-color); font-weight: 700; }
+        .tri6_hero p { font-size: 1.15rem; color: var(--text-light); margin-bottom: 30px; }
+        .tri6_btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 15px 35px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: background 0.3s, transform 0.2s; border: none; cursor: pointer; font-size: 1rem; letter-spacing: 0.5px; }
+        .tri6_btn:hover { background-color: var(--secondary-color); transform: translateY(-2px); }
+        .tri6_collections-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .tri6_section-title { text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 15px; font-weight: 300; letter-spacing: 1px; }
+        .tri6_section-subtitle { text-align: center; color: var(--text-light); max-width: 620px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .tri6_collections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 30px; }
+        .tri6_collection-card { background: var(--white); border: 1px solid #E5DCC1; border-radius: var(--border-radius); padding: 30px 25px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 3px solid var(--secondary-color); }
+        .tri6_collection-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-top-color: var(--accent-color); }
+        .tri6_collection-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .tri6_collection-card h3 { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px; font-weight: 500; letter-spacing: 0.3px; }
+        .tri6_collection-card p { color: var(--text-light); font-size: 0.95rem; }
+        .tri6_trust-section { background-color: #FAF6EC; padding: 60px 20px; }
+        .tri6_trust-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .tri6_trust-card { background: var(--white); padding: 30px; border-radius: var(--border-radius); border: 1px solid #E5DCC1; box-shadow: 0 4px 12px rgba(0,0,0,0.01); border-left: 4px solid var(--secondary-color); }
+        .tri6_trust-card h3 { color: var(--primary-color); margin-bottom: 12px; font-size: 1.25rem; display: flex; align-items: center; gap: 10px; font-weight: 500; letter-spacing: 0.3px; }
+        .tri6_trust-card h3::before { content: "✓"; color: var(--secondary-color); font-weight: bold; font-size: 1.4rem; }
+        .tri6_trust-card p { color: var(--text-light); font-size: 0.95rem; }
+        .tri6_disclosure-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #E5DCC1; }
+        .tri6_disclosure-container { max-width: 1200px; margin: 0 auto; }
+        .tri6_disclosure-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--white); border-radius: var(--border-radius); overflow: hidden; border: 1px solid #E5DCC1; }
+        .tri6_disclosure-table th, .tri6_disclosure-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #E5DCC1; }
+        .tri6_disclosure-table th { background-color: #EFE4CE; color: var(--primary-color); font-weight: 600; letter-spacing: 0.3px; }
+        .tri6_disclosure-note { font-size: 0.85rem; color: var(--text-light); text-align: justify; background: var(--bg-light); padding: 20px; border-radius: var(--border-radius); border: 1px solid #E5DCC1; }
+        .tri6_contact-section { background: linear-gradient(135deg, var(--primary-color) 0%, #0F0F24 100%); color: var(--white); padding: 60px 20px; }
+        .tri6_contact-container { max-width: 550px; margin: 0 auto; }
+        .tri6_contact-form { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.15); color: var(--text-dark); }
+        .tri6_form-group { margin-bottom: 20px; }
+        .tri6_form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); font-size: 0.9rem; letter-spacing: 0.3px; }
+        .tri6_form-group input, .tri6_form-group select, .tri6_form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #C9BC98; border-radius: var(--border-radius); font-size: 1rem; outline: none; transition: border-color 0.3s; font-family: inherit; }
+        .tri6_form-group textarea { resize: vertical; min-height: 90px; }
+        .tri6_form-group input:focus, .tri6_form-group select:focus, .tri6_form-group textarea:focus { border-color: var(--secondary-color); }
+        .tri6_success-message { display: none; background-color: #EFF6E6; border: 2px solid var(--success-color); color: var(--primary-color); padding: 30px; border-radius: var(--border-radius); text-align: center; }
+        .tri6_success-message h3 { margin-bottom: 10px; color: #3D5F26; }
+        footer { background-color: #131328; color: #B0B0C0; padding: 60px 20px 20px 20px; font-size: 0.9rem; border-top: 2px solid var(--secondary-color); }
+        .tri6_footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .tri6_footer-brand h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 1px; }
+        .tri6_footer-links h4, .tri6_footer-contact h4 { color: var(--white); margin-bottom: 15px; letter-spacing: 1px; }
+        .tri6_footer-links ul { list-style: none; }
+        .tri6_footer-links ul li { margin-bottom: 10px; }
+        .tri6_footer-links ul li a { color: #B0B0C0; text-decoration: none; transition: color 0.3s; }
+        .tri6_footer-links ul li a:hover { color: var(--secondary-color); }
+        .tri6_footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #1F1F3A; text-align: center; font-size: 0.8rem; }
+        @media (max-width: 768px) {
+            .tri6_nav-container { flex-direction: column; gap: 15px; }
+            .tri6_hero h1 { font-size: 2rem; }
+            .tri6_disclosure-table { display: block; overflow-x: auto; }
+            .tri6_contact-form { padding: 25px; }
+        }
+    </style>
+
+<link rel="canonical" href="https://livrariadavila.online/">
+<meta name="description" content="Informações relevantes e atualizadas em livrariadavila.online. Descubra tudo que precisa saber nesta página exclusiva.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://livrariadavila.online/">
+<meta property="og:site_name" content="livrariadavila.online">
+<meta property="og:description" content="Informações relevantes e atualizadas em livrariadavila.online. Descubra tudo que precisa saber nesta página exclusiva.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="livrariadavila.online">
+<meta name="generator" content="cms-ef0cb87d70d8">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Livrariadavila","url":"https://livrariadavila.online/","datePublished":"2024-07-17","dateModified":"2025-06-21","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Livrariadavila","url":"https://livrariadavila.online/"},"publisher":{"@type":"Organization","name":"Livrariadavila","url":"https://livrariadavila.online/"}}</script>
+
+<style>:root{--yxsx-p:rgb(184,129,71);--yxsx-s:rgb(135,81,83);--yxsx-id:'70788505e817'}@keyframes gwuwqztj{from{opacity:1}to{opacity:1}}.muxnur{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:bdf7mptu8w v4.25.257 -->
+</head>
+<body data-s="4705fb7e" data-p="ursemh">
+<noscript><div style="padding:16px;text-align:center;font-size:13px;"><p>Ative o JavaScript para acessar todo o conteúdo de livrariadavila.</p></div></noscript>
+    <header>
+        <nav class="tri6_nav-container">
+            <a href="#" class="tri6_logo" id="header-logo"></a>
+            <ul class="tri6_nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#linhas">Nossas Linhas</a></li>
+                <li><a href="#confianca">Nossa Casa</a></li>
+                <li><a href="#garantias">Compra e Direitos</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tri6_hero" id="home">
+        <div class="tri6_hero-content">
+            <h1>Uma <em>Livraria</em> Que Também é Palco</h1>
+            <p id="hero-description"></p>
+            <a href="#contato" class="tri6_btn">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section class="tri6_collections-section" id="linhas">
+        <h2 class="tri6_section-title">Nossas Linhas</h2>
+        <p class="tri6_section-subtitle">Muito além do livro — uma casa que reúne curadoria literária, papelaria selecionada, dispositivos de leitura digital, programação cultural contínua e produção teatral em um dos endereços mais visitados de Pinheiros.</p>
+        <div class="tri6_collections-grid">
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">📚</div><h3>Livros</h3><p>Curadoria de literatura brasileira e estrangeira, ensaios, arquitetura, artes, filosofia, infantojuvenis e HQs — com atendimento por consultores de leitura.</p></div>
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">✒️</div><h3>Papelaria e Presentes</h3><p>Cadernos, canetas, agendas, jogos, itens de escritório e presentes selecionados de marcas nacionais e importadas.</p></div>
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">📱</div><h3>Tecnologia e Leitura Digital</h3><p>E-readers, tablets, capas, acessórios e suprimentos para quem lê no digital ou combina livro impresso e biblioteca eletrônica.</p></div>
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">🎤</div><h3>Programação Cultural</h3><p>Lançamentos, saraus, palestras, mesas-redondas, oficinas literárias e festivais — uma agenda contínua aberta ao público em nosso espaço.</p></div>
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">🏛️</div><h3>Espaço para Eventos</h3><p>Curadoria e organização de encontros, exposições, workshops e ativações culturais para instituições, editoras e parceiros do universo literário.</p></div>
+            <div class="tri6_collection-card"><div class="tri6_collection-icon">🎭</div><h3>Produção Teatral</h3><p>Produção e apresentação de espetáculos, contações de histórias, performances literárias e leituras dramáticas em nossa programação cultural.</p></div>
+        </div>
+    </section>
+
+    <section class="tri6_trust-section" id="confianca">
+        <h2 class="tri6_section-title">Nossa Casa em Pinheiros</h2>
+        <p class="tri6_section-subtitle">Desde 2010 na Rua Fradique Coutinho, em Pinheiros — uma unidade concebida como espaço cultural, com curadoria literária, programação viva e ambiente projetado para o encontro entre leitores, autores e artistas.</p>
+        <div class="tri6_trust-grid">
+            <div class="tri6_trust-card"><h3>Curadoria Literária</h3><p>Nosso acervo é organizado por consultores de leitura que acompanham lançamentos, obras esgotadas e movimentos editoriais — indicando títulos com base em interesses, autores e contextos específicos de cada leitor.</p></div>
+            <div class="tri6_trust-card"><h3>Espaço Concebido para a Cultura</h3><p>Uma unidade projetada como palco de encontros — ambientes generosos para navegação lenta, espaço para eventos, café e áreas destinadas à programação cultural, tudo em uma das ruas mais vivas de Pinheiros.</p></div>
+            <div class="tri6_trust-card"><h3>Agenda Cultural Contínua</h3><p>Recebemos autores em lançamentos, promovemos saraus, palestras e oficinas, e produzimos espetáculos teatrais e performances literárias em ciclos regulares abertos ao público.</p></div>
+        </div>
+    </section>
+
+    <section class="tri6_disclosure-section" id="garantias">
+        <div class="tri6_disclosure-container">
+            <h2 class="tri6_section-title">Compra, Direitos e Marco Cultural</h2>
+            <p class="tri6_section-subtitle">Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com a Lei nº 10.753/2003 (Política Nacional do Livro), com a Lei nº 9.610/1998 (Direitos Autorais) e com as demais normas aplicáveis a produtos eletroeletrônicos e serviços culturais:</p>
+            <table class="tri6_disclosure-table">
+                <thead><tr><th>Item</th><th>Condição / Prazo</th><th>Observações Adicionais</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Garantia Legal — Livros</strong></td><td><strong>30 dias</strong> a partir do recebimento</td><td>Conforme art. 26 do CDC. Livros são produtos não duráveis para fins de garantia legal.</td></tr>
+                    <tr><td><strong>Garantia Legal — Eletrônicos</strong></td><td><strong>90 dias</strong> a partir do recebimento</td><td>Aplicável a e-readers, tablets e demais equipamentos, cumulativa com a garantia do fabricante.</td></tr>
+                    <tr><td><strong>Marco do Livro</strong></td><td>Lei nº 10.753/2003</td><td>Comercialização respeitando a Política Nacional do Livro, com isenção fiscal e valorização da leitura como bem cultural.</td></tr>
+                    <tr><td><strong>Direitos Autorais</strong></td><td>Lei nº 9.610/1998</td><td>Obras literárias e teatrais comercializadas e apresentadas com respeito aos direitos morais e patrimoniais dos autores.</td></tr>
+                    <tr><td><strong>Certificação de Eletrônicos</strong></td><td>INMETRO e ANATEL, quando aplicável</td><td>E-readers, tablets e acessórios wireless com certificação e homologação vigentes.</td></tr>
+                    <tr><td><strong>Direito de Arrependimento</strong></td><td><strong>7 dias corridos</strong></td><td>Aplicável a compras realizadas fora do estabelecimento físico (art. 49 do CDC).</td></tr>
+                    <tr><td><strong>Eventos e Espetáculos</strong></td><td>Regras informadas no ingresso</td><td>Programação cultural com condições de acesso, remarcação e cancelamento informadas na venda ou reserva.</td></tr>
+                    <tr><td><strong>Formas de Pagamento</strong></td><td>Dinheiro, cartão, PIX, vale-cultura</td><td>Parcelamento em até 4x sem juros no cartão para compras acima de valor mínimo.</td></tr>
+                </tbody>
+            </table>
+            <div class="tri6_disclosure-note" id="disclosure-example-note"></div>
+        </div>
+    </section>
+
+    <section class="tri6_contact-section" id="contato">
+        <div class="tri6_contact-container">
+            <h2 class="tri6_section-title" style="color: var(--white);">Fale com a Casa</h2>
+            <p class="tri6_section-subtitle" style="color: #B0B0C0;">Preencha o formulário abaixo e nossa equipe retornará em até 2 horas úteis com informações sobre livros, programação cultural, aluguel de espaço para eventos ou produções teatrais.</p>
+            <form class="tri6_contact-form" id="lead-form">
+                <div class="tri6_form-group"><label for="form-name">Nome Completo</label><input type="text" id="form-name" placeholder="Ex: Ana Souza" required></div>
+                <div class="tri6_form-group"><label for="form-email">E-mail</label><input type="email" id="form-email" placeholder="Ex: ana@email.com" required></div>
+                <div class="tri6_form-group"><label for="form-phone">Telefone / WhatsApp</label><input type="tel" id="form-phone" placeholder="Ex: (11) 99999-0000" required></div>
+                <div class="tri6_form-group">
+                    <label for="form-intent">Como podemos ajudar?</label>
+                    <select id="form-intent" required>
+                        <option value="">Selecione um assunto...</option>
+                        <option value="livros">Livros e Curadoria Literária</option>
+                        <option value="papelaria">Papelaria e Presentes</option>
+                        <option value="tecnologia">Tecnologia e Leitura Digital</option>
+                        <option value="programacao">Programação Cultural (agenda)</option>
+                        <option value="eventos">Espaço para Eventos (aluguel/parceria)</option>
+                        <option value="teatro">Produção Teatral / Apresentações</option>
+                        <option value="editora">Sou Editora / Autor(a)</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="tri6_form-group"><label for="form-message">Detalhes (opcional)</label><textarea id="form-message" placeholder="Ex: título ou autor procurado, tema do evento, data desejada, escopo da parceria..."></textarea></div>
+                <button type="submit" class="tri6_btn" style="width: 100%; margin-top: 10px;">Enviar Solicitação</button>
+            </form>
+            <div class="tri6_success-message" id="form-success">
+                <h3>✓ Solicitação Recebida com Sucesso!</h3>
+                <p>Olá, <strong id="user-name-span"></strong>. Seu contato foi registrado.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Nossa equipe retornará em breve pelo canal indicado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tri6_footer-container">
+            <div class="tri6_footer-brand" id="footer-brand-info"></div>
+            <div class="tri6_footer-links">
+                <h4>Políticas e Termos</h4>
+                <ul>
+                    <li><a id="link-privacy" href="#" target="_blank">Política de Privacidade</a></li>
+                    <li><a id="link-terms" href="#" target="_blank">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="tri6_footer-contact" id="footer-contact-info"></div>
+        </div>
+        <div class="tri6_footer-bottom">
+            <p id="footer-correspondent-law"></p>
+            <p style="margin-top: 10px;">&copy; <span id="copyright-year"></span> <span id="copyright-legal-name"></span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const CONFIG = {
+            tradeName: "Livraria da Vila",
+            legalName: "Livraria da Vila LTDA",
+            cnpj: "54.430.962/0006-14",
+            address: "R. Fradique Coutinho, 909, Pinheiros, São Paulo – SP, CEP 05416-011",
+            phone: "(11) 3096-4490",
+            email: "contato@livrariadavila.com.br",
+            privacyUrl: "https://livrariadavila.com.br/privacidade.html",
+            termsUrl: "https://livrariadavila.com.br/termos.html",
+            segment: "Comércio de Livros, Papelaria, Eletrônicos de Leitura, Serviços Culturais e Produção Teatral"
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('page-title').innerText = `${CONFIG.tradeName} | Livros, Papelaria, Programação Cultural e Produção Teatral em Pinheiros`;
+            document.getElementById('page-description').setAttribute('content', `${CONFIG.tradeName} — livraria cultural na Rua Fradique Coutinho, Pinheiros. Curadoria literária, papelaria, e-readers, programação de eventos e produção teatral.`);
+            
+            const nameParts = CONFIG.tradeName.split(' ');
+            const firstWord = nameParts[0];
+            const restOfName = nameParts.slice(1).join(' ');
+            document.getElementById('header-logo').innerHTML = restOfName
+                ? `${firstWord}<span> ${restOfName}</span>`
+                : firstWord;
+
+            document.getElementById('hero-description').innerHTML = `Desde 2010 na Rua Fradique Coutinho, em Pinheiros, oferecendo mais do que uma livraria: curadoria de livros, papelaria e presentes selecionados, dispositivos de leitura digital, programação cultural contínua e produção de espetáculos teatrais em uma unidade concebida como espaço vivo de encontro.`;
+            
+            document.getElementById('disclosure-example-note').innerHTML = `<strong>Observações sobre livros, direitos autorais e programação cultural:</strong> <br> Todos os livros comercializados pela ${CONFIG.tradeName} respeitam a Política Nacional do Livro (Lei nº 10.753/2003), que reconhece o livro como bem cultural essencial. Obras literárias e teatrais são comercializadas e apresentadas com respeito integral à Lei de Direitos Autorais (Lei nº 9.610/1998), incluindo direitos morais e patrimoniais dos autores. Dispositivos de leitura digital (e-readers e tablets) possuem certificação INMETRO e, quando aplicável, homologação ANATEL. Eventos culturais realizados em nosso espaço — lançamentos, saraus, palestras, oficinas e espetáculos teatrais — têm sua programação, condições de acesso, política de reserva e eventual cobrança de ingresso divulgadas previamente por nossos canais oficiais.`;
+
+            document.getElementById('footer-brand-info').innerHTML = `
+                <h4>${CONFIG.tradeName}</h4>
+                <p><strong>${CONFIG.legalName}</strong></p>
+                <p>CNPJ: ${CONFIG.cnpj}</p>
+                <br>
+                <p>Unidade Pinheiros — ${CONFIG.address}</p>
+            `;
+
+            document.getElementById('link-privacy').href = CONFIG.privacyUrl;
+            document.getElementById('link-terms').href = CONFIG.termsUrl;
+
+            document.getElementById('footer-contact-info').innerHTML = `
+                <h4>Atendimento</h4>
+                <p>Telefone: ${CONFIG.phone}</p>
+                <p>E-mail: <a href="mailto:${CONFIG.email}" style="color: #B0B0C0; text-decoration: none;">${CONFIG.email}</a></p>
+            `;
+
+            document.getElementById('footer-correspondent-law').innerHTML = `A <strong>${CONFIG.tradeName}</strong> (${CONFIG.legalName}) atua no ramo de ${CONFIG.segment.toLowerCase()}, em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com a Lei nº 10.753/2003 (Política Nacional do Livro), com a Lei nº 9.610/1998 (Direitos Autorais) e com as normas do INMETRO e da ANATEL aplicáveis a dispositivos eletroeletrônicos comercializados. Imagens meramente ilustrativas. Preços, disponibilidade de títulos, agenda de programação cultural e condições de aluguel de espaço estão sujeitos a confirmação por nossos canais oficiais.`;
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('copyright-legal-name').textContent = CONFIG.legalName;
+
+            initFormSubmission();
+        });
+
+        function initFormSubmission() {
+            const form = document.getElementById('lead-form');
+            const successBox = document.getElementById('form-success');
+            const userNameSpan = document.getElementById('user-name-span');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const inputName = document.getElementById('form-name').value;
+                userNameSpan.innerText = inputName;
+                form.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+    </script>
+<footer style="text-align:center;padding:16px 10px;font-size:11px;color:#888;margin-top:30px;border-top:1px solid #eaeaea"><p>© 2026 Livrariadavila. Este site não é afiliado a nenhuma entidade governamental. Conteúdo informativo. <a href="https://livrariadavila.online/" style="color:#888;text-decoration:none">livrariadavila.online</a></p></footer>
+</body>
+</html>
+
+<!-- 05ce463023b59dad3525f88c -->
